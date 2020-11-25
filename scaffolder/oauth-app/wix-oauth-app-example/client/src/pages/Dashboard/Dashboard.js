@@ -1,9 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/styles';
 import { Grid } from '@material-ui/core';
 import {TotalContacts, MainCard, ListData} from './components';
 import { useState, useEffect } from 'react';
-import queryString from 'query-string';
+import queryString from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/query-string';
 import Lottie from 'react-lottie'
 import animationData from '../../util/714-water-loader.json'
 import axios from 'axios';

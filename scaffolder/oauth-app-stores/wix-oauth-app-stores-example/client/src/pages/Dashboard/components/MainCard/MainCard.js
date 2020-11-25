@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '../../../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import EmailIcon from '@material-ui/icons/Email';

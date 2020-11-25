@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/components/node_modules/@material-ui/core/AppBar';
+import Toolbar from '../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/components/node_modules/@material-ui/core/Toolbar';
 
-import Typography from '@material-ui/core/Typography';
+import Typography from '../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/components/node_modules/@material-ui/core/Typography';
 
 export class NavBar extends Component {
     render() {

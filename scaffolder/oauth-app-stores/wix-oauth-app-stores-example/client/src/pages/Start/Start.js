@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import Avatar from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/Avatar';
-import Button from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/Button';
-import CssBaseline from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/CssBaseline';
-import Link from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/Link';
-import Box from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/Box';
-import Typography from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/components/node_modules/@material-ui/core/Typography';
-import Container from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/Container';
-import { makeStyles } from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/styles';
-import { grey } from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/@material-ui/core/colors';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/styles';
+import { grey } from '@material-ui/core/colors';
 import Lottie from 'react-lottie'
 import animationData from '../../util/1175-email.json'
-import queryString from '../../../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/pages/Start/node_modules/query-string'
+import queryString from 'query-string'
 
 
 function Copyright() {

@@ -4,8 +4,8 @@ import {BrowserRouter , Route, Switch} from 'react-router-dom';
 
 
 import './App.css';
-import { ThemeProvider as MuiThemeProvider } from '../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/node_modules/@material-ui/core/styles';
-import createMuiTheme from '../../../../wix-oauth-app-stores-example/wix-oauth-app-stores/client/src/node_modules/@material-ui/core/styles/createMuiTheme';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 import themeObject from './util/theme';
 
