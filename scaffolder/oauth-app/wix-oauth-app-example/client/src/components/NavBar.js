@@ -12,7 +12,7 @@ export class NavBar extends Component {
             <AppBar>
                 <Toolbar className="nav-container">
                     <Typography component="h1" variant="h5">
-                        Wix MailChimp App
+                        Wix Oauth App
                     </Typography>
                 </Toolbar>
             </AppBar>
