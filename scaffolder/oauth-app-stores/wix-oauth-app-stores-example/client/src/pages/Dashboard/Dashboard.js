@@ -113,7 +113,7 @@ const Dashboard = (props) => {
 
     const billing = data.siteInfo.instance.isFree ? { "Plan": "Free" } : data.siteInfo.instance.billing
     const siteOrders = data.siteOrders
-    console.log({ siteOrders, data })
+
     return (
 
       <div className={classes.root}>

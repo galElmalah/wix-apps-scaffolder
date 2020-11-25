@@ -70,12 +70,11 @@ app.get('/api/dashboard', async (req, res) => {
     const pair = instance.split('.');
     const data = pair[1];
     const dataJson = JSON.parse(decode(data, 'binary'));
-    // const { wixRefreshToken } = DB.getApiTokenByInstanceId(
-    //   dataJson.instanceId
-    // );
-    // console.log({ wixRefreshToken, instanceId: dataJson.instanceId })
-    const [siteInfo, siteOrders] = await Promise.all([getSiteInfo("OAUTH2.eyJraWQiOiJkZ0x3cjNRMCIsImFsZyI6IkhTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjNlMzc5NjQ4LTIxZTMtNDg0Zi1iZDI1LWM4NjUyOGM3ZDE2MlwifSIsImlhdCI6MTYwNjMxNDIwMSwiZXhwIjoxNjY5Mzg2MjAxfQ.zp6-yPjnM3uSSnIwAPhv9zv9zoeOKCJQ6by-fMQ6kBM"), getSiteOrders("OAUTH2.eyJraWQiOiJkZ0x3cjNRMCIsImFsZyI6IkhTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjNlMzc5NjQ4LTIxZTMtNDg0Zi1iZDI1LWM4NjUyOGM3ZDE2MlwifSIsImlhdCI6MTYwNjMxNDIwMSwiZXhwIjoxNjY5Mzg2MjAxfQ.zp6-yPjnM3uSSnIwAPhv9zv9zoeOKCJQ6by-fMQ6kBM")])
-    console.log({ siteInfo, siteOrders })
+    const { wixRefreshToken } = DB.getApiTokenByInstanceId(
+      dataJson.instanceId
+    );
+
+    const [siteInfo, siteOrders] = await Promise.all([getSiteInfo(wixRefreshToken), getSiteOrders(wixRefreshToken)]);
 
     res.json({ dataJson, siteInfo, siteOrders });
   } else {
