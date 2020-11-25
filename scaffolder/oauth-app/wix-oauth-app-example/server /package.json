@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app.js"
+    "start": "nodemon ./src/app.js"
   },
   "dependencies": {
     "axios": "^0.19.1",
