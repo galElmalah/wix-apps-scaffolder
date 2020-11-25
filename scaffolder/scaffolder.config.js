@@ -10,7 +10,6 @@ module.exports = {
   templatesOptions: {
     'oauth-app': {
       hooks: {
-        preAskingQuestions: (ctx) => console.log(ctx),
         postTemplateGeneration: async (ctx) => {
           const root = `${ctx.targetRoot}/wix-oauth-app-example`;
           const appServerPath = `${root}/server`;
