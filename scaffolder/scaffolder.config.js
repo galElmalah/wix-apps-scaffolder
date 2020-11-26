@@ -1,9 +1,9 @@
-const { exec, spawnSync } = require('child_process');
+const { exec, execSync, spawn } = require('child_process');
 const { promisify } = require('util');
-
+const promisifySpawn = promisify(spawn)
 const promisifyExec = promisify(exec);
-const postTemplateGeneration = async (ctx) => {
-  const root = `${ctx.targetRoot}/wix-oauth-app-example`;
+const postTemplateGeneration = (prefix) => async (ctx) => {
+  const root = `${ctx.targetRoot}/${prefix}`;
   const appServerPath = `${root}/server`;
   const appClientPath = `${root}/client`;
   ctx.logger.info(`Installing all deps in root, server and client.\nThis may take a few seconds...`);
@@ -16,7 +16,9 @@ const postTemplateGeneration = async (ctx) => {
   } catch (e) {
     ctx.logger.error(e)
   }
-  ctx.logger.warning(`Finished Installing all dependencies.\nTo start your app go to "${root}" and run "npm start".\n`);
+  ctx.logger.warning(`Finished Installing all dependencies.\nStarting App...\n`);
+  execSync('npm start', { cwd: root, stdio: "inherit" })
+
 };
 
 module.exports = {
@@ -26,12 +28,12 @@ module.exports = {
   templatesOptions: {
     'oauth-app': {
       hooks: {
-        postTemplateGeneration
+        postTemplateGeneration: postTemplateGeneration('wix-oauth-app-example')
       },
     },
     "oauth-app-stores": {
       hooks: {
-        postTemplateGeneration
+        postTemplateGeneration: postTemplateGeneration('wix-oauth-app-stores-example')
       }
     }
   },
